@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            list-style: none;
+            text-align: left;
+        }
+        form {
+            margin-left: 100px;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Avengers Quiz App</h2>
+
+    <form method="POST" action="{% url 'check_answer'%}">
+        {% csrf_token %}
+    <h4>Q. What is the first name of Iron Man ?</h4>
+    <ul>
+        <li><input type="radio" name="1" value="Tony">Tony</li>
+        <li><input type="radio" name="1" value="Stark">Stark</li>
+        <li><input type="radio" name="1" value="Peter">Peter</li>
+        <li><input type="radio" name="1" value="Steve">Steve</li>
+    </ul>
+
+    <h4>Q. Who is called the god of lightning in Avengers ?</h4>
+    <ul>
+        <li><input type="radio" name="2" value="Hulk">Hulk</li>
+        <li><input type="radio" name="2" value="Thor">Thor</li>
+        <li><input type="radio" name="2" value="Iron Man">Iron Man</li>
+        <li><input type="radio" name="2" value="Wasp">Wasp</li>
+    </ul>
+
+    <h4>Q. Who carries a shield of American flag theme in Avengers ?</h4>
+    <ul>
+        <li><input type="radio" name="3" value="Hulk">Hulk</li>
+        <li><input type="radio" name="3" value="Capt America">Capt. America</li>
+        <li><input type="radio" name="3" value="Iron Man">Iron Man</li>
+        <li><input type="radio" name="3" value="Thor">Thor</li>
+    </ul>
+
+    <h4>Q. Which avenger is green in color ?</h4>
+    <ul>
+        <li><input type="radio" name="4" value="Hulk">Hulk</li>
+        <li><input type="radio" name="4" value="Wasp">Wasp</li>
+        <li><input type="radio" name="4" value="Thor">Thor</li>
+        <li><input type="radio" name="4" value="Vision">Vision</li>
+    </ul>
+
+    <h4>Q. Which avenger can change it's size ?</h4>
+    <ul>
+        <li><input type="radio" name="5" value="Thor">Thor</li>
+        <li><input type="radio" name="5" value="Ant Man">Ant Man</li>
+        <li><input type="radio" name="5" value="Vision">Vision</li>
+        <li><input type="radio" name="5" value="Iron Man">Iron Man</li>
+    </ul>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+</body>
+</html>
